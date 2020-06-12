@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #cce8cf;
+}
+
+nav{
+    background: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 1px 3px 3px #aaa;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar a{
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover, .dropdown:hover > a{
+    font-size: larger;
+    font-weight: bolder;
+    transition: all 150ms;
+}
+
+.blog-icon a{
+    font-size: larger;
+    font-weight: bolder;
+    color: #0D5F8A;
+}
+
+/* Mobile Menu */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* icon居左*/
+.blog-icon{
+    flex-grow: 1;
+}
+
+/* 三条杠按钮居右边*/
+.toggle{
+	order: 1;
+}
+
+.bar{
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 18px;
+    background-color: #0D5F8A;
+    cursor: pointer;
+}
+
+.bar::before, .bar::after{
+    content: "";
+    display: inline-block;
+    background-color: inherit;
+    height: 2px;
+    width: 18px;
+    position: absolute;
+}
+
+.bar::before{
+    bottom: 5px;
+}
+
+.bar::after{
+    bottom: 10px;
+}
+
+/* 列表打开三条杠按钮变取消符号 */
+.active.bar {
+    width: 0;
+    height: 0;
+    padding-right: 1rem;
+}
+
+.active.bar::before, .active.bar::after{
+    height: 2px;
+    width: 20px;
+}
+
+.active.bar::before{
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.active.bar::after{
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.nav-content{
+    order: 2;
+    width: 100%;
+    text-align: left;
+    display: none;	
+    overflow: hidden;
+}
+
+.active.nav-content{ 
+    display: block;
+}
+
+.dropdown-content{
+    display: none; 
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+.card-container{
+    display: flex;
+    padding: 0.6rem 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ripple-card{
+    color: inherit;
+    background-color: #FFFFFF;
+    text-decoration-line: none;
+    margin-bottom: 1em;
+    width: 85%;
+    outline: none;
+   
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 3px 3px #aaa;
+}
+
+.front-end.ripple-card:hover{
+    color: white;
+    background-color: #6EC3C1;
+}
+
+.cipher.ripple-card:hover{
+    color: white;
+    background-color: #335120;
+}
+
+.algo.ripple-card:hover{
+    color: white;
+    background-color: #9DCC5F;
+}
+
+.note.ripple-card:hover{
+    color: white;
+    background-color: #0D5F8A;
+}
+
+.ripple-card::before{
+    content: "";
+    position: absolute;
+    padding: 100%;
+    border-radius: 50%;
+    left: calc(100%*var(--ripple-x));
+    top: calc(100%*var(--ripple-y));
+    background-color: #D0D0D0;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: transform 800ms, opacity 800ms;
+}
+
+.ripple-card:active::before{
+    transition: 0s;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@media all and (min-width: 600px){
+    .toggle{
+        display: none;
+    }
+
+    .nav-content{
+        width: auto;
+        display: block;
+    }
+
+    .dropdown-content{
+        position: absolute;
+        z-index: 1;
+    }
+
+    .ripple-card{
+        width: 60%;
+    }
+}
+
+
+
+
