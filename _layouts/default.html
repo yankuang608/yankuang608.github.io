@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="blog-icon"><a class="blog-icon" href="/article">旷的博客</a></li>
+            <li class="nav-content dropdown chosen">
+                <a href="/article">文章</a>
+                <div class="dropdown-content">
+                    <a style="color: #6EC3C1" href="/article?type=front-end">前端</a>
+                    <a style="color: #335120" href="/article?type=algo">算法</a>
+                    <a style="color: #9DCC5F" href="/article?type=cipher">密码学</a>
+                    <a style="color: #0D5F8A" href="/article?type=note">杂记</a>
+                </div>
+            </li>
+            <li class="nav-content"><a href="/project">个人项目</a></li>
+            <li class="nav-content"><a href="/profile">个人简介</a></li>
+            <li class="nav-content"><a href="/cooperation">合作</a></li>
+            <li class="toggle"><span class="bar"></span></li>
+        </ul>
+    </nav>
+    <div class="card-container">
+        {{ content }}
+    </div>
+    <script>
+        //设置鼠标点击位置使波浪从鼠标点击处开始扩散
+        const root = document.documentElement;
+        document.addEventListener('mousedown', e => {
+            const target = e.target;
+            const x = (e.clientX - target.offsetLeft) / target.offsetWidth;
+            const y = (e.clientY - target.offsetTop) / target.offsetHeight;
+            root.style.setProperty('--ripple-x', x);
+            root.style.setProperty('--ripple-y', y);
+        });
+
+        //navbar 三条杠按钮按下显示扩展栏
+        const bar = document.querySelector('.bar');
+        bar.addEventListener('click', e => {
+            const navitems = document.querySelectorAll('.nav-content');
+            [...navitems].forEach( navitem => {
+                navitem.classList.toggle('active');
+            });
+            const target = e.target;
+            target.classList.toggle('active');
+        });
+
+        function delay(URL) {
+            console.log(URL);
+            setTimeout(function () { window.location = URL }, 400);
+        }
+    </script>
+</body>
+
+</html>
