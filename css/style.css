@@ -10,8 +10,8 @@ body{
 
 nav{
     background: #FFFFFF;
-    padding: 0.5rem 1.5rem;
-    box-shadow: 1px 3px 3px #aaa;
+    padding: 0.4rem 1rem;
+    box-shadow: 1px 2px 2px #aaa;
 }
 
 ul{
@@ -19,6 +19,7 @@ ul{
 }
 
 a{
+    color: inherit;
     display: block;
     cursor: pointer;
     text-decoration: none;
@@ -34,10 +35,20 @@ a{
     transition: all 150ms;
 }
 
+.chosen > a{
+    font-size: larger;
+    font-weight: bolder;
+}
+
 .blog-icon a{
     font-size: larger;
     font-weight: bolder;
     color: #0D5F8A;
+}
+
+.index-createdAt{
+    font-size: smaller;
+    color: darkgray;
 }
 
 /* Mobile Menu */
@@ -119,13 +130,13 @@ a{
 }
 
 .dropdown-content{
-    display: none; 
+    display: none;
+    border-bottom: 1.2px solid darkgray; 
 }
 
 .dropdown:hover .dropdown-content{
     display: block;
 }
-
 
 .card-container{
     display: flex;
@@ -140,14 +151,14 @@ a{
     background-color: #FFFFFF;
     text-decoration-line: none;
     margin-bottom: 1em;
-    width: 85%;
+    width: 80%;
     outline: none;
    
     padding: 0.5rem 1rem;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 2px 3px 3px #aaa;
+    box-shadow: 1px 2px 2px #aaa;
 }
 
 .front-end.ripple-card:hover{
@@ -157,12 +168,12 @@ a{
 
 .cipher.ripple-card:hover{
     color: white;
-    background-color: #335120;
+    background-color: #9DCC5F;
 }
 
 .algo.ripple-card:hover{
     color: white;
-    background-color: #9DCC5F;
+    background-color: #335120;
 }
 
 .note.ripple-card:hover{
@@ -190,6 +201,12 @@ a{
 }
 
 @media all and (min-width: 600px){
+    nav{
+        /* 桌面模式增加阴影效果 */
+        box-shadow: 1px 3px 3px #aaa;
+        margin-bottom: 0.8rem;
+    }
+
     .toggle{
         display: none;
     }
@@ -202,13 +219,11 @@ a{
     .dropdown-content{
         position: absolute;
         z-index: 1;
+        border-bottom: none;
     }
 
     .ripple-card{
         width: 60%;
+        box-shadow: 2px 3px 3px #aaa;
     }
 }
-
-
-
-
