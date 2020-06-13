@@ -144,6 +144,7 @@ a{
     width: 75%;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .ripple-card{
