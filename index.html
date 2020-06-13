@@ -3,7 +3,7 @@ layout: default
 title: 旷的微博
 ---
 {% for post in site.posts %}
-    <a class="ripple-card {{page.type}}" href="javascript: delay('{{ post.url }}')">
+    <a class="ripple-card {{post.type}}" href="javascript: delay('{{ post.url }}')">
         <h4 class="index-title">
             {{ post.title }}
         </h4>
