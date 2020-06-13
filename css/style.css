@@ -141,7 +141,7 @@ a{
 .card-container{
     display: flex;
     padding: 0.6rem 0;
-    width: 100%;
+    width: 75%;
     flex-direction: column;
     align-items: center;
 }
@@ -151,7 +151,6 @@ a{
     background-color: #FFFFFF;
     text-decoration-line: none;
     margin-bottom: 1em;
-    width: 80%;
     outline: none;
    
     padding: 0.5rem 1rem;
@@ -223,7 +222,10 @@ a{
     }
 
     .ripple-card{
-        width: 60%;
         box-shadow: 2px 3px 3px #aaa;
+    }
+
+    .card-container{
+        width: 90%;
     }
 }
