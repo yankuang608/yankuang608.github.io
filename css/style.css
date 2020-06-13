@@ -141,7 +141,8 @@ a{
 .card-container{
     display: flex;
     padding: 0.6rem 0;
-    width: 75vw;
+    width: 55vw;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 
