@@ -1,17 +1,128 @@
----
-layout: default
-title: 旷的微博
----
-{% for post in site.posts %}
-    <a class="ripple-card {{post.type}}" href="javascript: delay('{{ post.url }}')">
-        <h4 class="index-title">
-            {{ post.title }}
-        </h4>
-        <div class="index-createdAt">
-            {{ post.date|date_to_string }}
-        </div>
-        <div class="card-text">
-            {{ post.description }}
-        </div> 
-    </a>
-{% endfor%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="blog-icon"><a class="blog-icon">旷的博客</a></li>
+            <li class="nav-content dropdown">
+                <a class="filter">分类</a>
+                <div class="dropdown-content">
+                    <a style="color: #6EC3C1">前端</a>
+                    <a style="color: #335120">算法</a>
+                    <a style="color: #9DCC5F">密码学</a>
+                    <a style="color: #0D5F8A">杂记</a>
+                </div>
+            </li>
+            <li class="nav-content"><a>文章</a></li>
+            <li class="nav-content"><a>个人项目</a></li>
+            <li class="nav-content"><a>个人简介</a></li>
+            <li class="nav-content"><a>合作</a></li>
+            <li class="toggle"><span class="bar"></span></li>
+        </ul>
+    </nav>
+    <div class="card-container">
+        <a class="ripple-card front-end" href="#">
+            <h4 class="index-title">
+                我的第一篇文章
+            </h4>
+            <div class="index-createdAt">
+                上次修改: 05/20/2020
+            </div>
+            <div class="card-text mb-4">
+                GOGOGOGOGOGOOGO
+            </div>
+        </a>
+        <a class="ripple-card algo" href="#">
+            <h4 class="index-title">
+                我的第一篇文章
+            </h4>
+            <div class="index-createdAt">
+                上次修改: 05/20/2020
+            </div>
+            <div class="card-text mb-4">
+                GOGOGOGOGOGOOGO
+            </div>
+        </a>
+        <a class="ripple-card cipher" href="#">
+            <h4 class="index-title">
+                我的第一篇文章
+            </h4>
+            <div class="index-createdAt">
+                上次修改: 05/20/2020
+            </div>
+            <div class="card-text mb-4">
+                GOGOGOGOGOGOOGO
+            </div>
+        </a>
+        <a class="ripple-card cipher" href="#">
+            <h4 class="index-title">
+                我的第一篇文章
+            </h4>
+            <div class="index-createdAt">
+                上次修改: 05/20/2020
+            </div>
+            <div class="card-text mb-4">
+                GOGOGOGOGOGOOGO
+            </div>
+        </a>
+        <a class="ripple-card note" href="#">
+            <h4 class="index-title">
+                我的第一篇文章
+            </h4>
+            <div class="index-createdAt">
+                上次修改: 05/20/2020
+            </div>
+            <div class="card-text mb-4">
+                GOGOGOGOGOGOOGO
+            </div>
+        </a>
+        <a class="ripple-card algo" href="#">
+            <h4 class="index-title">
+                我的第一篇文章
+            </h4>
+            <div class="index-createdAt">
+                上次修改: 05/20/2020
+            </div>
+            <div class="card-text mb-4">
+                GOGOGOGOGOGOOGO
+            </div>
+        </a>
+    </div>
+    <script>
+        //设置鼠标点击位置使波浪从鼠标点击处开始扩散
+        const root = document.documentElement;
+        document.addEventListener('mousedown', e => {
+            const target = e.target;
+            const x = (e.clientX - target.offsetLeft) / target.offsetWidth;
+            const y = (e.clientY - target.offsetTop) / target.offsetHeight;
+            root.style.setProperty('--ripple-x', x);
+            root.style.setProperty('--ripple-y', y);
+        });
+
+        //navbar 三条杠按钮按下显示扩展栏
+        const bar = document.querySelector('.bar');
+        bar.addEventListener('click', e => {
+            const navitems = document.querySelectorAll('.nav-content');
+            [...navitems].forEach( navitem => {
+                navitem.classList.toggle('active');
+            });
+            const target = e.target;
+            target.classList.toggle('active');
+        });
+
+        function delay(URL) {
+            console.log(URL);
+            setTimeout(function () { window.location = URL }, 400);
+        }
+    </script>
+</body>
+
+</html>
