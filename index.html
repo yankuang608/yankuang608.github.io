@@ -1,129 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parralax Effect</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-    <!-- <nav class="nav-list">
-        <li class="nav-item blog-icon">
-            <a>
-                <span>YK608</span><span class="icon-component">Blog</span>
-            </a>
-        </li>
-        <li class="nav-item"><a>文章</a></li>
-        <li class="nav-item"><a>小项目</a></li>
-        <li class="nav-item"><a><i class="fa fa-2x fa-github" aria-hidden="true"></i></a></li>
-    </nav> -->
-    <section class="welcome-scene" style="--bg-img: url(/assets/stary.jpg)">
-        <span class="welcome-word">你好, 欢迎来到我的博客</span>
-        <div class="welcome-button">
-            <a class="button primary" href="#main_title">开始阅读</a>
-            <a class="button secondary">了解作者</a>
-            <a><i class="fa fa-3x fa-github" style="color: #171828" aria-hidden="true"></i></a>
+---
+layout: main
+title: YK608的博客
+---
+{% for page in site.posts %}
+    <a class="card" style="--bg-img:{{ page.img_url }}">
+        <div>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.description }}…</p>
+            <div class="date">{{ page.date | date_to_string }}</div>
+            <div class="tags">
+                {% for tag in page.tags %}
+                    <div class="tag">{{ tag }}</div>
+                {% end for%}
+            </div>
         </div>
-    </section>
-    <section class="wrapper">
-        <div class="main-title" id="main_title">
-            <h1>我的文章</h1>
-            <ul class="categories">
-                <li class="category-item chosen"><a>全部</a></li>
-                <li class="category-item"><a>算法</a></li>
-                <li class="category-item"><a>前端</a></li>
-                <li class="category-item"><a>密码学</a></li>
-                <li class="category-item"><a>杂记</a></li>
-            </ul>
-        </div>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
-            <div>
-                <h1>HTML 语法</h1>
-                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
-                <div class="date">6 Oct 2017</div>
-                <div class="tags">
-                    <div class="tag">HTML</div>
-                </div>
-            </div>
-        </a>
-    </section>
-    <footer> Copyright &copy; 2020 严旷. All Rights Reserved 未经允许不得转载 </footer>
-    
-
-
-</body>
-
-</html>
+    </a>
+{% endfor %}
