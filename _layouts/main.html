@@ -13,13 +13,13 @@
     <section class="welcome-scene" style="--bg-img: url(/assets/stary.jpg)">
         <span class="welcome-word">你好, 欢迎来到我的博客</span>
         <div class="welcome-button">
-            <a class="button primary">开始阅读</a>
+            <a class="button primary" href="#main_title">开始阅读</a>
             <a class="button secondary">了解作者</a>
             <a><i class="fa fa-3x fa-github" style="color: #171828" aria-hidden="true"></i></a>
         </div>
     </section>
     {{ content }}
-    
+    <footer> Copyright &copy; {{ 'now' | date: "%Y" }} 严旷. All Rights Reserved 未经允许不得转载 </footer>
 </body>
 
 </html>
