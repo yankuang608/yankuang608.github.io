@@ -14,7 +14,7 @@ permalink: /category/algo
             <li class="category-item"><a href="/categories/note.html">杂记</a></li>
         </ul>
     </div>
-    {% for post in site.posts %}
+    {% for post in site.categories.algo %}
     {% capture img_url %}
     --bg-img: {{ post.img_url }}
     {% endcapture %}
