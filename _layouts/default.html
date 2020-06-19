@@ -4,59 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/style2.css">
+    <title>Parralax Effect</title>
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav>
-        <ul class="navbar">
-            <li class="blog-icon"><a class="blog-icon" href="/article">旷的博客</a></li>
-            <li class="nav-content dropdown chosen">
-                <a href="/">文章</a>
-                <div class="dropdown-content">
-                    <a style="color: #6EC3C1" href="/category/front_end">前端</a>
-                    <a style="color: #335120" href="/category/algo">算法</a>
-                    <a style="color: #9DCC5F" href="/category/cipher">密码学</a>
-                    <a style="color: #0D5F8A" href="/category/note">杂记</a>
-                </div>
+    <nav style="--bg-img: url(stary.jpg)">
+        <ul class="nav-list">
+            <li class="nav-item blog-icon">
+                <a>
+                    <span>YanKuang</span><span class="icon-component">Blog</span>
+                </a>
             </li>
-            <li class="nav-content"><a href="/project">个人项目</a></li>
-            <li class="nav-content"><a href="/profile">个人简介</a></li>
-            <li class="nav-content"><a href="/cooperation">合作</a></li>
-            <li class="toggle"><span class="bar"></span></li>
+            <li class="nav-item"><a><i class="fa fa-2x fa-github" aria-hidden="true"></i></a></li>
         </ul>
     </nav>
-    <div class="card-container">
+    <section class="content">
         {{ content }}
-    </div>
-    <script>
-        //设置鼠标点击位置使波浪从鼠标点击处开始扩散
-        const root = document.documentElement;
-        document.addEventListener('mousedown', e => {
-            const target = e.target;
-            const x = (e.clientX - target.offsetLeft) / target.offsetWidth;
-            const y = (e.clientY - target.offsetTop) / target.offsetHeight;
-            root.style.setProperty('--ripple-x', x);
-            root.style.setProperty('--ripple-y', y);
-        });
-
-        //navbar 三条杠按钮按下显示扩展栏
-        const bar = document.querySelector('.bar');
-        bar.addEventListener('click', e => {
-            const navitems = document.querySelectorAll('.nav-content');
-            [...navitems].forEach( navitem => {
-                navitem.classList.toggle('active');
-            });
-            const target = e.target;
-            target.classList.toggle('active');
-        });
-
-        function delay(URL) {
-            console.log(URL);
-            setTimeout(function () { window.location = URL }, 400);
-        }
-    </script>
+        <footer> Copyright &copy; 2020 严旷. All Rights Reserved 未经允许不得转载 </footer>
+    </section>
+    
 </body>
 
 </html>
