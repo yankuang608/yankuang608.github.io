@@ -14,7 +14,10 @@ title: YK608的博客
         </ul>
     </div>
     {% for post in site.posts %}
-    <a class="card" style="--bg-img:{{ post.img_url }}" href= "{{ post.url }}">
+    {% capture img_url %}
+    --bg-img: {{ post.img_url }}
+    {% endcapture %}
+    <a class="card" style="--bg-img: '{{ post.img_url }}' " href= "{{ post.url }}">
         <div>
             <h1>{{ post.title }}</h1>
             <p>{{ post.description }}…</p>
