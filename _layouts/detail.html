@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="/css/detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav style="--bg-img: url(../assets/stary.jpg)">
+    <nav style="--bg-img: url(/assets/stary.jpg)">
         <ul class="nav-list">
             <li class="nav-item blog-icon">
                 <a>
@@ -22,9 +22,8 @@
     </nav>
     <section class="content">
         {{ content }}
-        <footer> Copyright &copy; 2020 严旷. All Rights Reserved 未经允许不得转载 </footer>
+        {% include footer.html %}
     </section>
-    
 </body>
 
 </html>
