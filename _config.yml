@@ -1,2 +1,7 @@
 permalink: /:categories/:title/
 baseurl: http://yankuang608.github.io
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
