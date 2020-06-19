@@ -6,14 +6,14 @@ title: YK608的博客
     <div class="main-title" id="main_title">
         <h1>我的文章</h1>
         <ul class="categories">
-            <li class="category-item chosen"><a href="#">全部</a></li>
+            <li class="category-item"><a href="#">全部</a></li>
             <li class="category-item"><a href="/categories/algo.html">算法</a></li>
             <li class="category-item"><a href="/categories/front_end.html">前端</a></li>
-            <li class="category-item"><a href="/categories/cipher.html">密码学</a></li>
+            <li class="category-item chosen"><a href="/categories/cipher.html">密码学</a></li>
             <li class="category-item"><a href="categories/note.html">杂记</a></li>
         </ul>
     </div>
-    {% for post in site.posts %}
+    {% for post in site.category.cipher %}
     <a class="card" style="--bg-img:'{{ post.img_url }}'" href= "{{ post.url }}">
         <div>
             <h1>{{ post.title }}</h1>
