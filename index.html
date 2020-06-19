@@ -14,7 +14,7 @@ title: YK608的博客
         </ul>
     </div>
     {% for page in site.posts %}
-    <a class="card" style="--bg-img:{{ page.img_url }}">
+    <a class="card" style="--bg-img:'{{ page.img_url }}'" href= "{{ page.url }}">
         <div>
             <h1>{{ page.title }}</h1>
             <p>{{ page.description }}…</p>
