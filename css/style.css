@@ -1,276 +1,306 @@
 /* 通用属性设置 */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 修改页面默认的滑动选项 */
+html{
+scroll-behavior: smooth;
 }
 
 :root {
-  --color-bg: #fff;
-  --color-primary: #183864;
-  --transition-time: 0.5s;
+--color-bg: #fff;
+--color-primary: #183864;
+--transition-time: 0.6s;
 }
 
 body {
-  min-height: 100vh;
-  font-family: 'Open Sans';
-  background: #fafafa;
+min-height: 100vh;
+font-family: 'Open Sans';
+background: #fafafa;
 }
 
 a{
-  display: block;
-  cursor: pointer;
-  color: inherit;
-  overflow: hidden;
-  text-decoration: none;
+display: block;
+cursor: pointer;
+color: inherit;
+overflow: hidden;
+text-decoration: none;
 }
 
 ul{
-  list-style-type: none;
+list-style-type: none;
 }
 
 nav{
-  font: 3rem;
-  height: 5vh;
-  padding: 0px 3rem;
+font: 3rem;
+height: 5vh;
+padding: 0px 3rem;
+}
+
+footer{
+font-size: 0.8rem;
+color: var(--color-primary);
+text-align: center;
 }
 
 /* welcome section 属性设置 */
 .welcome-scene{
-    height: 45vh;
-    width: 100%;
-    background-image: var(--bg-img);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  height: 45vh;
+  width: 100%;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .welcome-word{
-    font-size: 4rem;
-    text-align: center;
-    color: var(--color-bg);
+  font-size: 4rem;
+  text-align: center;
+  color: var(--color-bg);
 
-    user-select: none;
+  user-select: none;
 }
 
 .welcome-button{
-    display: flex;
+  display: flex;
 }
 
 .welcome-scene a{
-    margin: 1rem 0.5rem;
+  margin: 1rem 0.5rem;
 }
 
 .button{
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
 }
 
 .primary{
-    color: var(--color-primary);
-    background: var(--color-bg);
+  color: var(--color-primary);
+  background: var(--color-bg);
 }
 
 .secondary{
-    border: 0.15rem solid var(--color-bg);
-    color: var(--color-bg);
+  border: 0.15rem solid var(--color-bg);
+  color: var(--color-bg);
 }
 
 
 /* wrapper section 属性设置 */
 .wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 3rem;
-  row-gap: 2rem;
-  margin: 1rem auto;
-  width: max-content;
+display: grid;
+justify-content: center;
+align-items: center;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+column-gap: 3rem;
+row-gap: 2rem;
+margin: 1rem auto 2rem;
+width: max-content;
 }
 
 .main-title{
-    grid-row: 1 / span 1; 
-    grid-column: 1 / -1;   /* 标题部分占据一整行 */
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 1rem;
+  grid-row: 1 / span 1; 
+  grid-column: 1 / -1;   /* 标题部分占据一整行 */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 1rem;
 }
 
 .main-title h1{
-    color: var(--color-primary);
-    font-size: 2.5rem;
-    padding-right: 2rem;
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  padding-right: 2rem;
+  user-select: none;
 }
 
+/* ul 默认上下结构 */
 .category-item{
-    cursor: pointer;
-    float: left;
-    color: #6d7255;
-    font-size: 1.2rem;
-    padding-right: 0.4rem;
+float: left;
+}
+
+.category-item a{
+  cursor: pointer;
+  color: #6d7255;
+  font-size: 1.2rem;
+  padding-right: 0.4rem;
+  transition: transform 0.3s ease-in;
+}
+
+.category-item.chosen a{
+  color: #74b5d4;
 }
 
 /* 添加标签间的分隔符 */
-.category-item:not(:last-child)::after{
-    content: "|";
-    padding-left: 0.4rem;
+.category-item:not(:last-child) a::after{
+  color: #6d7255;
+  content: "|";
+  padding-left: 0.4rem;
+}
+
+/* 添加标签的上浮效果，鼠标移动到当前分类时不上浮 */
+.category-item:not(.chosen):hover a{
+  transform: translateY(-1rem);
+
 }
 
 /* .nav-list{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .blog-icon{
-    font-size: 1.33rem;
-    font-family: 'Balsamiq Sans', cursive;
-    flex-grow: 1;
+  font-size: 1.33rem;
+  font-family: 'Balsamiq Sans', cursive;
+  flex-grow: 1;
 }
 
 .icon-component{
-    color: var(--color-bg);
-    border-radius: 4px;
-    background-color: #336ea7;
-    margin-left: 2px;
-    padding: 1.5px 4px;
+  color: var(--color-bg);
+  border-radius: 4px;
+  background-color: #336ea7;
+  margin-left: 2px;
+  padding: 1.5px 4px;
 }
 
 .nav-item{
-    cursor: pointer;
-    padding: 0 0.6rem;
+  cursor: pointer;
+  padding: 0 0.6rem;
 }
 
 .nav-item:not(.blog-icon) a:hover{
-    background-color: green;
+  background-color: green;
 } */
 
 .card {
-  --bg-filter-opacity: 0.35;
-  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 25rem;
-  width: 22rem;
-  font-size: 1.4rem;
-  color: white;
-  border-radius: 0.8rem;
-  padding: 1rem;
+--bg-filter-opacity: 0.35;
+background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+height: 25rem;
+width: 22rem;
+font-size: 1.4rem;
+color: white;
+border-radius: 0.8rem;
+padding: 1rem;
 
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0.5rem 0.5rem 1rem #aaa;
-  position: relative;
+display: flex;
+align-items: flex-end;
+background-size: cover;
+background-position: center;
+box-shadow: 0.5rem 0.5rem 1rem #aaa;
+position: relative;
 }
 
 .card h1 {
-  margin: 0;
-  font-size: 1.5em;
-  line-height: 1.2em;
+margin: 0;
+font-size: 1.5em;
+line-height: 1.2em;
 }
 
 .card p {
-  font-size: 0.75em;
-  margin-top: 0.5em;
-  line-height: 2em;
+font-size: 0.75em;
+margin-top: 0.5em;
+line-height: 2em;
 }
 
 .card .tags {
-  display: flex;
+display: flex;
 }
 
 .card .tags .tag {
-  font-size: 0.75em;
-  background: rgba(255,255,255,0.5);
-  border-radius: 0.3rem;
-  padding: 0 0.5em;
-  margin-right: 0.5em;
-  line-height: 1.5em;
-  transition: all, var(--transition-time);
+font-size: 0.75em;
+background: rgba(255,255,255,0.5);
+border-radius: 0.3rem;
+padding: 0 0.5em;
+margin-right: 0.5em;
+line-height: 1.5em;
+transition: all, var(--transition-time);
 }
 
 .card:hover .tags .tag {
-  background: var(--color-primary);
-  color: var(--color-bg);
+background: var(--color-primary);
+color: var(--color-bg);
 }
 
 .card .date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.75em;
-  padding: 1em;
-  line-height: 1em;
-  opacity: 0.8;
+position: absolute;
+top: 0;
+right: 0;
+font-size: 0.75em;
+padding: 1em;
+line-height: 1em;
+opacity: 0.8;
 }
 
 /* 设置 hover 的动画波动效果, 两个圆其实位置一致 */
 .card:before, .card:after {
-  content: '';
-  transform: scale(0);
-  transform-origin: top left;
-  border-radius: 50%;
-  position: absolute;
-  left: -50%;
-  top: -50%;
-  z-index: -5;
-  transition: all, var(--transition-time) ease-in-out;
+content: '';
+transform: scale(0);
+transform-origin: top left;
+border-radius: 50%;
+position: absolute;
+left: -50%;
+top: -50%;
+z-index: -5;
+transition: all, var(--transition-time) ease-in-out;
 }
 
 /* 大圆 */
 .card:before {
-  background: #e6d868;
-  width: 250%;
-  height: 250%;
+background: #e6d868;
+width: 250%;
+height: 250%;
 }
 
 /* 小圆 */
 .card:after {
-  background: #edf7d3;
-  width: 200%;
-  height: 200%;
+background: #edf7d3;
+width: 200%;
+height: 200%;
 }
 
 .card:hover {
-  transform: rotate(0);
-  color: var(--color-primary);
+transform: rotate(0);
+color: var(--color-primary);
 }
 
 .card:hover:before, .card:hover:after {
-  transform: scale(1);
+transform: scale(1);
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 568px){
-  html{
-      font-size: 10px;
-  }
-  
-  .wrapper {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-  }
-
-  .card {
-    width: calc(100vw - 4rem);
-  }
-}
+/* MEDIA QUERIES max-width 要从大到小， min-width 要从小到大*/
 
 @media screen and (max-width: 1285px) {
-  .wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.wrapper {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
+.wrapper {
+  grid-template-columns: 1fr 1fr;
 }
+}
+
+@media screen and (max-width: 450px){
+html{
+    font-size: 11px;
+}
+
+.wrapper {
+  grid-template-columns: 1fr;
+  padding: 1.5rem;
+}
+
+.card {
+  width: calc(100vw - 3rem);
+}
+}
+
