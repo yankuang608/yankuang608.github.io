@@ -303,8 +303,12 @@ display: flex;
     width: calc(100vw - 3rem);
   }
 
+  .main-title{
+    flex-direction: column;
+  }
+
   .category-item a{
-    font-size: 1.55rem;
+    font-size: 1.6rem;
   }
 }
 
