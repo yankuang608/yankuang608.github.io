@@ -4,125 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Parralax Effect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav>
-        <ul class="navbar">
-            <li class="blog-icon"><a class="blog-icon">旷的博客</a></li>
-            <li class="nav-content dropdown">
-                <a class="filter">分类</a>
-                <div class="dropdown-content">
-                    <a style="color: #6EC3C1">前端</a>
-                    <a style="color: #335120">算法</a>
-                    <a style="color: #9DCC5F">密码学</a>
-                    <a style="color: #0D5F8A">杂记</a>
+    <!-- <nav class="nav-list">
+        <li class="nav-item blog-icon">
+            <a>
+                <span>YK608</span><span class="icon-component">Blog</span>
+            </a>
+        </li>
+        <li class="nav-item"><a>文章</a></li>
+        <li class="nav-item"><a>小项目</a></li>
+        <li class="nav-item"><a><i class="fa fa-2x fa-github" aria-hidden="true"></i></a></li>
+    </nav> -->
+    <section class="welcome-scene" style="--bg-img: url(stary.jpg)">
+        <span class="welcome-word">你好, 欢迎来到我的博客</span>
+        <div class="welcome-button">
+            <a class="button primary">开始阅读</a>
+            <a class="button secondary">了解作者</a>
+            <a><i class="fa fa-3x fa-github" style="color: #171828" aria-hidden="true"></i></a>
+        </div>
+    </section>
+    <section class="wrapper">
+        <div class="main-title">
+            <h1>我的文章</h1>
+            <ul class="categories">
+                <li class="category-item">全部</li>
+                <li class="category-item">算法</li>
+                <li class="category-item">前端</li>
+                <li class="category-item">密码学</li>
+                <li class="category-item">杂记</li>
+            </ul>
+        </div>
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
                 </div>
-            </li>
-            <li class="nav-content"><a>文章</a></li>
-            <li class="nav-content"><a>个人项目</a></li>
-            <li class="nav-content"><a>个人简介</a></li>
-            <li class="nav-content"><a>合作</a></li>
-            <li class="toggle"><span class="bar"></span></li>
-        </ul>
-    </nav>
-    <div class="card-container">
-        <a class="ripple-card front-end" href="#">
-            <h4 class="index-title">
-                我的第一篇文章
-            </h4>
-            <div class="index-createdAt">
-                上次修改: 05/20/2020
-            </div>
-            <div class="card-text mb-4">
-                GOGOGOGOGOGOOGO
             </div>
         </a>
-        <a class="ripple-card algo" href="#">
-            <h4 class="index-title">
-                我的第一篇文章
-            </h4>
-            <div class="index-createdAt">
-                上次修改: 05/20/2020
-            </div>
-            <div class="card-text mb-4">
-                GOGOGOGOGOGOOGO
-            </div>
-        </a>
-        <a class="ripple-card cipher" href="#">
-            <h4 class="index-title">
-                我的第一篇文章
-            </h4>
-            <div class="index-createdAt">
-                上次修改: 05/20/2020
-            </div>
-            <div class="card-text mb-4">
-                GOGOGOGOGOGOOGO
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
             </div>
         </a>
-        <a class="ripple-card cipher" href="#">
-            <h4 class="index-title">
-                我的第一篇文章
-            </h4>
-            <div class="index-createdAt">
-                上次修改: 05/20/2020
-            </div>
-            <div class="card-text mb-4">
-                GOGOGOGOGOGOOGO
-            </div>
-        </a>
-        <a class="ripple-card note" href="#">
-            <h4 class="index-title">
-                我的第一篇文章
-            </h4>
-            <div class="index-createdAt">
-                上次修改: 05/20/2020
-            </div>
-            <div class="card-text mb-4">
-                GOGOGOGOGOGOOGO
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
             </div>
         </a>
-        <a class="ripple-card algo" href="#">
-            <h4 class="index-title">
-                我的第一篇文章
-            </h4>
-            <div class="index-createdAt">
-                上次修改: 05/20/2020
-            </div>
-            <div class="card-text mb-4">
-                GOGOGOGOGOGOOGO
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
             </div>
         </a>
-    </div>
-    <script>
-        //设置鼠标点击位置使波浪从鼠标点击处开始扩散
-        const root = document.documentElement;
-        document.addEventListener('mousedown', e => {
-            const target = e.target;
-            const x = (e.clientX - target.offsetLeft) / target.offsetWidth;
-            const y = (e.clientY - target.offsetTop) / target.offsetHeight;
-            root.style.setProperty('--ripple-x', x);
-            root.style.setProperty('--ripple-y', y);
-        });
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+        </a>
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+        </a>
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+        </a>
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>HTML 语法</h1>
+                <p>HTML语法包含了它如何工作以及如何编写HTML…</p>
+                <div class="date">6 Oct 2017</div>
+                <div class="tags">
+                    <div class="tag">HTML</div>
+                </div>
+            </div>
+        </a>
+        
+        
+            
+    </section>
 
-        //navbar 三条杠按钮按下显示扩展栏
-        const bar = document.querySelector('.bar');
-        bar.addEventListener('click', e => {
-            const navitems = document.querySelectorAll('.nav-content');
-            [...navitems].forEach( navitem => {
-                navitem.classList.toggle('active');
-            });
-            const target = e.target;
-            target.classList.toggle('active');
-        });
 
-        function delay(URL) {
-            console.log(URL);
-            setTimeout(function () { window.location = URL }, 400);
-        }
-    </script>
 </body>
 
 </html>

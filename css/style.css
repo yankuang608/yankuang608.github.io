@@ -1,215 +1,275 @@
+/* 通用属性设置 */
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #cce8cf;
+:root {
+  --color-bg: #fff;
+  --color-primary: #183864;
+  --transition-time: 0.5s;
 }
 
-nav{
-    background: #FFFFFF;
-    padding: 0.5rem 1.5rem;
-    box-shadow: 1px 3px 3px #aaa;
-}
-
-ul{
-    list-style-type: none;
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background: #fafafa;
 }
 
 a{
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
+  display: block;
+  cursor: pointer;
+  color: inherit;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.navbar a{
-    padding: 0.5rem 1rem;
+ul{
+  list-style-type: none;
 }
 
-.navbar a:hover, .dropdown:hover > a{
-    font-size: larger;
-    font-weight: bolder;
-    transition: all 150ms;
+nav{
+  font: 3rem;
+  height: 5vh;
+  padding: 0px 3rem;
 }
 
-.blog-icon a{
-    font-size: larger;
-    font-weight: bolder;
-    color: #0D5F8A;
-}
+/* welcome section 属性设置 */
+.welcome-scene{
+    height: 45vh;
+    width: 100%;
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
-/* Mobile Menu */
-.navbar{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-word{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--color-bg);
+
+    user-select: none;
+}
+
+.welcome-button{
+    display: flex;
+}
+
+.welcome-scene a{
+    margin: 1rem 0.5rem;
+}
+
+.button{
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+}
+
+.primary{
+    color: var(--color-primary);
+    background: var(--color-bg);
+}
+
+.secondary{
+    border: 0.15rem solid var(--color-bg);
+    color: var(--color-bg);
+}
+
+
+/* wrapper section 属性设置 */
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  margin: 1rem auto;
+  width: max-content;
+}
+
+.main-title{
+    grid-row: 1 / span 1; 
+    grid-column: 1 / -1;   /* 标题部分占据一整行 */
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+.main-title h1{
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    padding-right: 2rem;
+}
+
+.category-item{
+    cursor: pointer;
+    float: left;
+    color: #6d7255;
+    font-size: 1.2rem;
+    padding-right: 0.4rem;
+}
+
+/* 添加标签间的分隔符 */
+.category-item:not(:last-child)::after{
+    content: "|";
+    padding-left: 0.4rem;
+}
+
+/* .nav-list{
+    display: flex;
     align-items: center;
 }
 
-/* icon居左*/
 .blog-icon{
+    font-size: 1.33rem;
+    font-family: 'Balsamiq Sans', cursive;
     flex-grow: 1;
 }
 
-/* 三条杠按钮居右边*/
-.toggle{
-	order: 1;
+.icon-component{
+    color: var(--color-bg);
+    border-radius: 4px;
+    background-color: #336ea7;
+    margin-left: 2px;
+    padding: 1.5px 4px;
 }
 
-.bar{
-    display: inline-block;
-    position: relative;
-    height: 2px;
-    width: 18px;
-    background-color: #0D5F8A;
+.nav-item{
     cursor: pointer;
+    padding: 0 0.6rem;
 }
 
-.bar::before, .bar::after{
-    content: "";
-    display: inline-block;
-    background-color: inherit;
-    height: 2px;
-    width: 18px;
-    position: absolute;
+.nav-item:not(.blog-icon) a:hover{
+    background-color: green;
+} */
+
+.card {
+  --bg-filter-opacity: 0.35;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 25rem;
+  width: 22rem;
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 0.8rem;
+  padding: 1rem;
+
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0.5rem 0.5rem 1rem #aaa;
+  position: relative;
 }
 
-.bar::before{
-    bottom: 5px;
+.card h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
 }
 
-.bar::after{
-    bottom: 10px;
+.card p {
+  font-size: 0.75em;
+  margin-top: 0.5em;
+  line-height: 2em;
 }
 
-/* 列表打开三条杠按钮变取消符号 */
-.active.bar {
-    width: 0;
-    height: 0;
-    padding-right: 1rem;
+.card .tags {
+  display: flex;
 }
 
-.active.bar::before, .active.bar::after{
-    height: 2px;
-    width: 20px;
+.card .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
 }
 
-.active.bar::before{
-    bottom: 0;
-    transform: rotate(45deg);
+.card:hover .tags .tag {
+  background: var(--color-primary);
+  color: var(--color-bg);
 }
 
-.active.bar::after{
-    bottom: 0;
-    transform: rotate(-45deg);
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: 0.8;
 }
 
-.nav-content{
-    order: 2;
-    width: 100%;
-    text-align: left;
-    display: none;	
-    overflow: hidden;
+/* 设置 hover 的动画波动效果, 两个圆其实位置一致 */
+.card:before, .card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time) ease-in-out;
 }
 
-.active.nav-content{ 
-    display: block;
+/* 大圆 */
+.card:before {
+  background: #e6d868;
+  width: 250%;
+  height: 250%;
 }
 
-.dropdown-content{
-    display: none; 
+/* 小圆 */
+.card:after {
+  background: #edf7d3;
+  width: 200%;
+  height: 200%;
 }
 
-.dropdown:hover .dropdown-content{
-    display: block;
+.card:hover {
+  transform: rotate(0);
+  color: var(--color-primary);
 }
 
-
-.card-container{
-    display: flex;
-    padding: 0.6rem 0;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(./starryNight.jpg);
+.card:hover:before, .card:hover:after {
+  transform: scale(1);
 }
 
-.ripple-card{
-    color: inherit;
-    background-color: #FFFFFF;
-    text-decoration-line: none;
-    margin-bottom: 1em;
-    width: 85%;
-    outline: none;
-   
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 2px 3px 3px #aaa;
+/* MEDIA QUERIES */
+@media screen and (max-width: 568px){
+  html{
+      font-size: 10px;
+  }
+  
+  .wrapper {
+    padding: 1.5rem;
+  }
+
+  .card {
+    width: calc(100vw - 4rem);
+  }
 }
 
-.front-end.ripple-card:hover{
-    color: white;
-    background-color: #6EC3C1;
+@media screen and (max-width: 1285px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-.cipher.ripple-card:hover{
-    color: white;
-    background-color: #335120;
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
-.algo.ripple-card:hover{
-    color: white;
-    background-color: #9DCC5F;
-}
-
-.note.ripple-card:hover{
-    color: white;
-    background-color: #0D5F8A;
-}
-
-.ripple-card::before{
-    content: "";
-    position: absolute;
-    padding: 100%;
-    border-radius: 50%;
-    left: calc(100%*var(--ripple-x));
-    top: calc(100%*var(--ripple-y));
-    background-color: #D0D0D0;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
-    transition: transform 800ms, opacity 800ms;
-}
-
-.ripple-card:active::before{
-    transition: 0s;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0);
-}
-
-@media all and (min-width: 600px){
-    .toggle{
-        display: none;
-    }
-
-    .nav-content{
-        width: auto;
-        display: block;
-    }
-
-    .dropdown-content{
-        position: absolute;
-        z-index: 1;
-    }
-
-    .ripple-card{
-        width: 60%;
-    }
-}
-
-
-
-
