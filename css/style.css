@@ -254,6 +254,7 @@ nav{
   }
   
   .wrapper {
+    grid-template-columns: 1fr;
     padding: 1.5rem;
   }
 
