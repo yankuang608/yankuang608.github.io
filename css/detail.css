@@ -105,9 +105,9 @@ footer{
     margin: 0.5rem 0;
 }
 
-.content ul,ol{
+/* .content ul,ol{
     margin: 0.5rem 0.3rem;
-}
+} */
 
 /* 设置引用框间距 */
 blockquote{
@@ -115,6 +115,7 @@ blockquote{
     background: #74b5d4;
     border-left: 10px solid #336ea7;
     padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem;
     quotes: "\201C""\201D""\2018""\2019";
     font-size: 1.5rem;
 }
