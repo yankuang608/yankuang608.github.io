@@ -78,7 +78,7 @@ footer{
     position: relative;
     min-height: 95vh;
     padding: 2rem 30rem;
-    overflow: hidden;
+    max-width: 100vw;
 }
 
 .content p{
