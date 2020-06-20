@@ -336,6 +336,7 @@ blockquote{
   border-radius: 1.5rem;
   padding: 2px 4px;
   margin: 0.5rem 0.3rem;
+  overflow: hidden;
 }
 
 /* MEDIA QUERIES max-width 要从大到小， min-width 要从小到大*/
