@@ -114,7 +114,7 @@ blockquote{
 }
 
 /* 代码高亮样式 */
-.highlight table td { padding: 0.5rem; }
+.highlight table td { padding: 5px 2px; }
 .highlight table pre { margin: 0; }
 .highlight .cm {
   color: #999988;
