@@ -21,7 +21,6 @@ a{
 /* 导航栏设置*/
 nav{
     font-size: 1.3rem;
-    height: 5vh;
     padding: 0.4rem 5rem;
     background-image: var(--bg-img);
     background-size: cover;
@@ -342,18 +341,14 @@ blockquote{
 @media screen and (max-width: 1285px) {
   .content{
     flex-direction: row;
-    padding: 2rem 20rem;
+    padding: 1rem 20rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  html{
-    font-size: 13px;
-  }
-
   .content{
     flex-direction: row;
-    padding: 2rem 8rem;
+    padding: 1rem 6rem;
   }
 }
 
@@ -364,6 +359,6 @@ blockquote{
   
   .content{
       flex-direction: row;
-      padding: 2rem 3rem;
+      padding: 1rem 1.5rem;
   }
 }
