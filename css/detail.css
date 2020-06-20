@@ -39,6 +39,14 @@ nav a{
     text-decoration: none;
 }
 
+footer{
+    position: absolute;
+    font-size: 0.8rem;
+    color: #183864;
+    bottom: 0;
+    align-self: center;
+}
+
 .nav-list{
     display: flex;
     align-items: center;
@@ -73,20 +81,40 @@ nav a{
     line-height: 200%;
 }
 
-footer{
-    position: absolute;
-    font-size: 0.8rem;
-    color: #183864;
-    bottom: 0;
-    align-self: center;
+.content p{
+    line-height: 200%;
 }
 
+/* 设置图片尺寸 */
 .content img{
     width: 100%;
     height: auto;
 }
 
-.highlight table td { padding: 5px; }
+
+/* 设置文章内容间距 */
+.content *{
+    margin: 0.6rem 0.5rem;
+}
+
+.content h1,h2{
+    margin: 1rem 0;
+}
+
+.content h2{
+    margin: 0.8rem 0;
+}
+
+/* 设置引用框间距 */
+blockquote{
+    background: #74b5d4;
+    border-left: 10px solid #336ea7;
+    padding: 0.5rem 0.5rem;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+/* 代码高亮样式 */
+.highlight table td { padding: 0.5rem; }
 .highlight table pre { margin: 0; }
 .highlight .cm {
   color: #999988;
@@ -292,6 +320,9 @@ footer{
 .highlight .w {
   color: #bbbbbb;
 }
+
+/* 修改代码框样式 */
 .highlight {
-  background-color: #f8f8f8;
+  background-color: #edf7d3;
+  border-radius: 0.4rem;
 }
