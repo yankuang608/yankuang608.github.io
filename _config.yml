@@ -1,5 +1,6 @@
 permalink: /:categories/:title/
 baseurl: http://yankuang608.github.io
+githubpage: https://github.com/yankuang608
 highlighter: rouge
 markdown: kramdown
 kramdown:
