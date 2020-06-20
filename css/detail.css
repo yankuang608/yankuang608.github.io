@@ -107,10 +107,12 @@ footer{
 
 /* 设置引用框间距 */
 blockquote{
+    color: #171828;
     background: #74b5d4;
     border-left: 10px solid #336ea7;
     padding: 0.5rem 0.5rem;
     quotes: "\201C""\201D""\2018""\2019";
+    font-size: 2rem;
 }
 
 /* 代码高亮样式 */
