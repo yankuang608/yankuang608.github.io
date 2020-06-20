@@ -75,7 +75,6 @@ footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
     position: relative;
     min-height: 95vh;
     padding: 2rem 30rem;
