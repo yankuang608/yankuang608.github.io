@@ -116,14 +116,15 @@ blockquote{
     background: #74b5d4;
     border-left: 10px solid #336ea7;
     padding: 0.5rem 0.5rem;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 0.3rem;
     quotes: "\201C""\201D""\2018""\2019";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 
 /* 代码高亮样式 */
 .highlight table td { padding: 2px; } /* 设置代码中每个变量间间距 */
-.highlight table pre { margin: 4px; }
+.highlight table pre { margin: 0.5rem 0.3rem; }
 .highlight .cm {
   color: #999988;
   font-style: italic;
@@ -333,4 +334,5 @@ blockquote{
 .highlight {
   background-color: #edf7d3;
   border-radius: 1.5rem;
+  padding: 2px 4px;
 }
