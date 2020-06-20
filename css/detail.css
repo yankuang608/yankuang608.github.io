@@ -105,9 +105,10 @@ footer{
     margin: 0.5rem 0;
 }
 
-/* .content ul,ol{
-    margin: 0.5rem 0.3rem;
-} */
+.content ul,ol{
+    margin: 0.5rem 0;
+    padding: 0 0.5rem;
+}
 
 /* 设置引用框间距 */
 blockquote{
@@ -122,7 +123,7 @@ blockquote{
 
 /* 代码高亮样式 */
 .highlight table td { padding: 2px; } /* 设置代码中每个变量间间距 */
-.highlight table pre { margin: 0; }
+.highlight table pre { margin: 4px; }
 .highlight .cm {
   color: #999988;
   font-style: italic;
