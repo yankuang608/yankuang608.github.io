@@ -335,4 +335,35 @@ blockquote{
   background-color: #edf7d3;
   border-radius: 1.5rem;
   padding: 2px 4px;
+  margin: 0.5rem 0.3rem;
+}
+
+/* MEDIA QUERIES max-width 要从大到小， min-width 要从小到大*/
+@media screen and (max-width: 1285px) {
+  .content{
+    flex-direction: row;
+    padding: 2rem 20rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html{
+    font-size: 13px;
+  }
+
+  .content{
+    flex-direction: row;
+    padding: 2rem 8rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  html{
+      font-size: 11px;
+  }
+  
+  .content{
+      flex-direction: row;
+      padding: 2rem 3rem;
+  }
 }
