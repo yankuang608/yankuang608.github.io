@@ -347,6 +347,10 @@ blockquote{
 }
 
 @media screen and (max-width: 768px) {
+  nav{
+    padding: 0.4rem 3rem;
+  }
+
   .content{
     padding: 1rem 6rem;
   }
@@ -355,6 +359,10 @@ blockquote{
 @media screen and (max-width: 450px){
   html{
       font-size: 11px;
+  }
+
+  nav{
+    padding: 0.4rem 2rem;
   }
   
   .content{
