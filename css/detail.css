@@ -116,7 +116,7 @@ blockquote{
 }
 
 /* 代码高亮样式 */
-.highlight table td { padding: 5px 2px; }
+.highlight table td { padding: 5px 2px; } /* 设置代码中每个变量间间距 */
 .highlight table pre { margin: 0; }
 .highlight .cm {
   color: #999988;
@@ -326,5 +326,5 @@ blockquote{
 /* 修改代码框样式 */
 .highlight {
   background-color: #edf7d3;
-  border-radius: 0.6rem;
+  border-radius: 2rem;
 }
