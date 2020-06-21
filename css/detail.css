@@ -94,11 +94,11 @@ footer{
 
 /* 设置文章内容间距 */
 .content h1,h2{
-    margin: 1rem 0;
+    margin: 0.7rem 0;
 }
 
 .content h3{
-    margin: 0.8rem 0;
+    margin: 0.5rem 0;
 }
 
 .content p{
@@ -107,7 +107,7 @@ footer{
 
 .content ul,ol{
     margin: 0.5rem 0;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
 }
 
 /* 设置引用框间距 */
