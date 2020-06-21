@@ -12,24 +12,3 @@ img1: {{ site.imgurl }}baiyun.jpeg
 一写下这个题目，我就想起了08年春晚上白云是如何洋洋洒洒地说着自己是如何与火结下了不解之缘。与08年相似的是20年的我们现在也正经历着新冠这样一场天灾的考验，望疫情能早日结束。
 ![Image]({{ page.img1 }})
 可能与已经很多前端工程师不同，我是在学习了六年计算机科学才来正式地学习前端知识。在之前捣鼓过机器学习，入坑过数据分析还学了一段时间的iOS开发。直观点来说，在JS之前，我用过C, C++, Python,PHP, Swift, Objective-C, Java, Ruby等语言。当然这都只是学生时代的小项目，只能说是用过而已。那问题来了，为什么我学过这么多最后一个才学习JS呢，这就不得不提到一个叫鄙视链的东西了，可能学生时代大家都把它当个梗来调侃，但或多或少地会让我对前端形成一个印象——杂，没啥技术含量，
-
-
-
-![Image]({{ page.img_url }})
-
->I am blowfish and I am happy
-
-```js
-const fk = () => {
-    console.log('fk you man');
-}
-print ('3 backticks or');
-var a = 1 + 3;
-//六大基本类型： Boolean String Number Symbol null undefined
-```
-
-* List
-* List
-* List
-
-> Blockquote
