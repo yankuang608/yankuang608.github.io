@@ -4,7 +4,7 @@ title: 为什么我要学习前端
 description: 不知道你是如何与前端结缘的，在这里我想分享下我是如何走向前端的
 tags: 前端
 category: front_end
-img_url: http://qc8conjyt.bkt.clouddn.com/blowfish.jpg
+img_url: blowfish.jpg
 ---
 # {{ page.title }}
 ## 学习前端之前

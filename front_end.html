@@ -17,7 +17,7 @@ permalink: /category/front_end
 {% capture img_url %}
 --bg-img: {{ post.img_url }}
 {% endcapture %}
-<a class="card" style="--bg-img: url('{{ post.img_url }}')" href= "{{ post.url }}">
+<a class="card" style="--bg-img: url({{ site.imgurl }}{{ post.img_url }})" href= "{{ post.url }}">
     <div>
         <h1>{{ post.title }}</h1>
         <p>{{ post.description }}…</p>
