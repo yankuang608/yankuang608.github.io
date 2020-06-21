@@ -81,7 +81,7 @@ footer{
     max-width: 100vw;
 }
 
-.content p{
+.content *:not(.highlight){
     line-height: 200%;
 }
 
@@ -123,7 +123,7 @@ blockquote{
 }
 
 /* 代码高亮样式 */
-.highlight table td { padding: 2px; } /* 设置代码中每个变量间间距 */
+.highlight table td { padding: 3px; } /* 设置代码中每个变量间间距 */
 .highlight table pre { margin: 0.5rem 0.3rem; }
 .highlight .cm {
   color: #999988;
