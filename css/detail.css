@@ -93,16 +93,22 @@ footer{
 
 
 /* 设置文章内容间距 */
-.content h1,h2{
-    margin: 0.7rem 0;
+.content h1{
+    margin: 0.5rem 0;
+}
+
+.content h2{
+  color: #383838;
+  margin: 0.5rem 0;
 }
 
 .content h3{
-    margin: 0.5rem 0;
+    color: #585858;
+    margin: 0.3rem 0;
 }
 
 .content p{
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 
 .content ul,ol{
