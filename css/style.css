@@ -297,11 +297,11 @@ display: flex;
 
   .wrapper {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 3rem;
   }
 
   .card {
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 1.5rem);
   }
 
   .main-title{
