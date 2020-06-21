@@ -7,7 +7,7 @@ category: front_end
 img_url: blowfish.jpg
 img1: {{ site.imgurl }}baiyun.jpeg
 ---
-# {{ page.title }}
+# 为什么我要学习前端
 ## 学习前端之前
 一写下这个题目，我就想起了08年春晚上白云是如何洋洋洒洒地说着自己是如何与火结下了不解之缘。与08年相似的是20年的我们现在也正经历着新冠这样一场天灾的考验，望疫情能早日结束。
 ![Image]({{ page.img1 }})
