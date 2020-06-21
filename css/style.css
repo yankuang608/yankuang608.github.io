@@ -292,7 +292,7 @@ display: flex;
 
 @media screen and (max-width: 450px){
   html{
-      font-size: 11px;
+      font-size: 13px;
   }
 
   .wrapper {
@@ -301,7 +301,7 @@ display: flex;
   }
 
   .card {
-    width: calc(100vw - 3rem);
+    width: calc(100vw - 2.5rem);
   }
 
   .main-title{
