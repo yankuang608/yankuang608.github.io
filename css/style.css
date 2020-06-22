@@ -297,7 +297,7 @@ display: flex;
 
   .wrapper {
     grid-template-columns: 1fr;
-    padding: 3rem;
+    padding: 1.5rem;
   }
 
   .card {
