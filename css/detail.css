@@ -91,6 +91,11 @@ footer{
     height: auto;
 }
 
+.content a{
+    text-decoration: none;
+    color: #6d7255;
+}
+
 
 /* 设置文章内容间距 */
 .content h1{
@@ -342,7 +347,7 @@ blockquote{
   border-radius: 1.5rem;
   padding: 2px 4px;
   margin: 0.5rem 0.3rem;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 
 /* MEDIA QUERIES max-width 要从大到小， min-width 要从小到大*/
@@ -364,11 +369,15 @@ blockquote{
 
 @media screen and (max-width: 450px){
 
+  html{
+    font-size: 13px;
+  }
+
   nav{
-    padding: 0.3rem 1.5rem;
+    padding: 0.4rem 1.5rem;
   }
   
   .content{
-      padding: 0.8rem 1.2rem;
+      padding: 1.0rem 1.2rem;
   }
 }
