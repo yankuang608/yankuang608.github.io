@@ -353,7 +353,7 @@ blockquote{
 /* MEDIA QUERIES max-width 要从大到小， min-width 要从小到大*/
 @media screen and (max-width: 1285px) {
   .content{
-    padding: 1rem 20rem;
+    padding: 1rem 15rem;
   }
 }
 
