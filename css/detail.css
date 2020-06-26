@@ -346,7 +346,8 @@ blockquote{
   background-color: #edf7d3;
   border-radius: 1.5rem;
   padding: 2px 4px;
-  width: calc(100vw - 0.6rem);
+  position: absolute;
+  width: 100%;
   overflow-x: scroll;
 }
 
