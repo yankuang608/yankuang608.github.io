@@ -8,11 +8,11 @@ img_url: /JS.png
 ---
 # {{ page.title }}
 ## 分析
-apply 和 call 都可以实现指定函数运行时的 this，区别在于 apply 将参数放入一个数组内传递，两者都包含一下两个步骤。
+apply 和 call 都可以实现指定函数运行时的 this，区别在于 apply 将参数放入一个数组内传递，两者都包含以下两个步骤。
 1. 绑定 this
 2. 传入参数并执行函数
 
-为了实现第一点，可以考虑将函数作为属性添加到想要指定的 context 中，这样当执行函数时，函数的 this 就会指向 context ，在执行完成后再删除。 而第二点可以通过 eval() 函数来执行。 eval() 会将传入的字符串以 JS 代码的方式运行。此外，如果 context 为 null
+为了实现第一点，可以考虑将函数作为属性添加到指定的 context 中，这样当执行函数时，函数的 this 就会指向 context ，在执行完成后再删除。 而第二点可以通过 eval() 函数来执行。 eval() 会将传入的字符串以 JS 代码的方式运行。此外，如果 context 为 null
 this 会默认指向 window;
 ```js
 Function.prototype.myCall = function(context){
