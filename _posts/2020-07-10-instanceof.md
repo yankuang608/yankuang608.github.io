@@ -4,7 +4,7 @@ title: instanceof 的模拟实现
 description: 模拟实现 instanceof 关键字
 tags: 原生JS
 category: front_end
-img_url: /JS.jpg
+img_url: /JS.png
 img_1: /prototype.png
 ---
 # {{ page.title }}
