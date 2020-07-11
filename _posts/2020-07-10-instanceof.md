@@ -38,8 +38,8 @@ isInstanceof('s',String);   // true
 这时我们借用 **typeof** 来判断 obj 的类型是否为 'object' 如果不是则直接返回 false。 这时可能会想到那 null 呢？ 它的返回值可也是 'object' 啊。然而没关系，因为 null 无法通过第二条判断语句。完整代码如下
 ```js
 function isInstanceof(obj, constructor){
-    if (typeof obj !== 'object'){return false;}
-    if (obj === Object.prototype){return false;}
+    if (typeof obj !== 'object'){return false;} // 可以将三条判断语句和为一句，为了更好展示每层判断内容，这里分开来写 
+    if (obj === Object.prototype){return false;} 
     if !( obj.__proto__ ){return false;} //如果 obj 的 __proto__ 属性不存在，也应该返回false
     return (obj.__proto__ === constructor.prototype) || isInstanceof(obj.__proto__, constructor);
 }
